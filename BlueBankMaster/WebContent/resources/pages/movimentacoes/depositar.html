@@ -1,0 +1,104 @@
+  <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Deposito
+                    <small>On-Line</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Contato</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Map Column -->
+            <div class="col-md-8">
+
+				<div id="success">
+	            	<!-- Page Heading/Breadcrumbs -->
+			        <div class="alert alert-{{bootstrap}}">
+					  <strong>{{message}}</strong>
+					</div>
+			        <!-- /.row -->
+            	</div>
+
+            <!-- Map Column -->
+            <div class="col-md-6">
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Agencia:</label>
+                            <input type="text" class="form-control" ng-model="conta.agencia" id="agencia" >
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Numero:</label>
+                            <input type="text" class="form-control" ng-model="conta.numero" id="numero" >
+                        </div>
+                    </div>
+                    <button class="btn btn-primary span3" ng-click="carregarConta(conta)">Buscar Conta</button>
+                
+            </div>
+             <div class="col-md-3">
+            	<div class="control-group">
+                    <div class="controls">
+                        <label>Inteiro: R$ 1</label>
+                        <input type="number" class="form-control col-sm-2" ng-model="conta.valor" id="conta.valor" ng-disabled="!conta.id" >
+                    </div>
+                </div>
+            	<h1>...</h1>
+                <!-- For success/fail messages -->
+                <button class="btn btn-success span3" ng-click="depositar(conta.id, conta.valor, conta.decimal)" ng-if="conta.id">Depositar</button>
+            </div>
+            <div class="col-md-3">
+            	<div class="control-group">
+                    <div class="controls">
+                        <label>Decimal: , 00</label>
+                        <input type="number" class="form-control col-sm-2" ng-model="conta.decimal" id="conta.decimal" ng-disabled="!conta.id" >
+                    	<br>
+                    </div>
+                </div>
+                <h1>...</h1>
+				<!-- For success/fail messages -->
+		        <a href="#/" class="btn btn-danger span3">Cancelar</a>                        
+
+            </div>
+           
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-md-4">
+                <h3>Contatos SAC</h3>
+                <p>
+                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                </p>
+                <p><i class="fa fa-phone"></i> 
+                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <p><i class="fa fa-envelope-o"></i> 
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i> 
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
